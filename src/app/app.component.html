@@ -4,7 +4,34 @@
   
   <span>Welcome To Joaquim Barreto's Portal</span>
     <div class="spacer"></div>
+
+  <a aria-label="Joaquim on Linked" target="_blank" rel="noopener" href="https://www.linkedin.com/in/joaquimbarreto" title="LinkedIn">
+    
+
+    <svg id="linkedin-logo" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.44 33.89">
+      <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+            }
+  
+            .cls-2 {
+              fill: #ffffff;
+            }
+          </style>
+        </defs> 
+        <!-- <rect class="cls-1" width="400" height="400" /> -->
+        <path class="cls-2" d="M3,10.77h5V26.7H3ZM5.43,2.85A2.87,2.87,0,1,1,2.56,5.72,2.86,2.86,0,0,1,5.43,2.85"/>
+        <path class="cls-2" d="M11,10.77h4.74V13h.07a5.2,5.2,0,0,1,4.69-2.58c5,0,5.94,3.3,5.94,7.59V26.7H21.51V19c0-1.84,0-4.22-2.58-4.22s-3,2-3,4.09V26.7H11Z"/>
+      </svg>
+
+    
+  
+    
+  </a>
+
   <a aria-label="Joaquim on twitter" target="_blank" rel="noopener" href="https://twitter.com/joaquimbarreto" title="Twitter">
+
     
     <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
       <defs>
@@ -29,15 +56,18 @@
 <div class="content" role="main">
 
   <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
+  <div class="card highlight-card card-large">
 
 
-    <span>{{ title }} different fieds!</span>
+    <span>
+      
+          {{ name }}'s Fields of Experience
+      </span>
 
 
   </div>
 
-  <!-- Resources -->
+  <!-- Fields -->
   <h2>Fields</h2>
   <p>Below are links to the different fields of expertise:</p>
 
@@ -46,6 +76,8 @@
 
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z"/></svg>
       <span>Economics</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
    </a>
 
     <a class="card" target="_blank" rel="noopener" href="https://www.joaquimbarreto.art">
@@ -65,26 +97,26 @@
 
   </div>
 
-  <!-- Next Steps -->
+  <!-- CV -->
   <h2>Curriculum Vitae</h2>
   <p>Joaquim Barreto's Résumés</p>
 
   <input type="hidden" #selection>
 
   <div class="card-container">
-    <div class="card card'large" (click)="selection.value = 'component'" tabindex="0">
+    <div class="card card-large" (click)="toggleEconomist()" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z"/></svg>
 
       <span>Economist</span>
     </div>
 
-    <div class="card card-large" (click)="selection.value = 'material'" tabindex="0">
+    <div class="card card-large" (click)="selection.value = 'photographer'" tabindex="0">
       <svg class="material-icons"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.4 10.5l4.77-8.26C13.47 2.09 12.75 2 12 2c-2.4 0-4.6.85-6.32 2.25l3.66 6.35.06-.1zM21.54 9c-.92-2.92-3.15-5.26-6-6.34L11.88 9h9.66zm.26 1h-7.49l.29.5 4.76 8.25C21 16.97 22 14.61 22 12c0-.69-.07-1.35-.2-2zM8.54 12l-3.9-6.75C3.01 7.03 2 9.39 2 12c0 .69.07 1.35.2 2h7.49l-1.15-2zm-6.08 3c.92 2.92 3.15 5.26 6 6.34L12.12 15H2.46zm11.27 0l-3.9 6.76c.7.15 1.42.24 2.17.24 2.4 0 4.6-.85 6.32-2.25l-3.66-6.35-.93 1.6z"/></svg>
 
       <span>Photographer & Filmmaker</span>
     </div>
 
-    <div class="card card-large" (click)="selection.value = 'dependency'" tabindex="0">
+    <div class="card card-large" (click)="selection.value = 'engineer'" tabindex="0">
 
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
       <span>Software Engineer</span>
@@ -94,6 +126,7 @@
    
   </div>
 
+  <app-economist [show]="showEconomist"></app-economist>
  
 
   <!-- Footer -->
