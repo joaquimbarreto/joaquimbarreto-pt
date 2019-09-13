@@ -113,6 +113,11 @@
     width: 168px;
   }
 
+  .card.card-large {
+    background-color: #fafafa;
+  }
+
+
   .card-container .card:not(.highlight-card) {
     cursor: pointer;
   }
@@ -139,21 +144,6 @@
   .card.card-large {
     width: 250px;
     outline: none;
-  }
-
-  svg#rocket {
-    width: 80px;
-    position: absolute;
-    left: -10px;
-    top: -24px;
-  }
-
-  svg#rocket-smoke {
-    height: 100vh;
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
   }
 
   a,
@@ -258,15 +248,7 @@
     margin-right: 4px;
   }
 
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
-
-
+ 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
 
