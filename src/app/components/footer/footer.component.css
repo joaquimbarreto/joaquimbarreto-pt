@@ -1,0 +1,20 @@
+.footer-copyright {
+  margin-left: 10px;
+  background-color: #1976d2;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copyright svg.material-icons path {
+  fill: #fff;
+}
+
+.footer-copyright p {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.material-icons {
+  margin-top: 12px;
+}
