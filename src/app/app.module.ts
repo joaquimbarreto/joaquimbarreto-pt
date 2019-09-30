@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { EconomistComponent } from './components/economist/economist.component';
 import { PhotographerComponent } from './components/photographer/photographer.component';
 import { EngineerComponent } from './components/engineer/engineer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EconomistComponent,
     PhotographerComponent,
-    EngineerComponent
+    EngineerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
